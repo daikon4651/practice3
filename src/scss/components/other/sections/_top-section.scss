@@ -1,0 +1,85 @@
+// セクション・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.topSection {
+  padding-inline: 25px;
+  background-image: url(../images/check.png);
+  background-color: var(--checkBgColor);
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: var(--pinkLineHeight);
+    margin-inline: auto;
+    background-color: var(--lightMainColor);
+  }
+
+  &__head {
+    max-width: 378px;
+    margin-inline: auto;
+    margin-block-end: 36px;
+
+    &::before {
+      content: url(../images/candy.svg);
+      display: block;
+      margin-block-end: 18px;
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    margin-block-end: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--mainColor);
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  &__list {
+    max-width: 452px;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    &Item {
+      width: calc(100% / 2 - 15px / 2);
+    }
+  }
+
+
+  @include g.mq() {
+    &__head {
+      max-width: 567px;
+    }
+
+    &__heading {
+      margin-block-end: 46px;
+      font-size: 25px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__list {
+      max-width: 874px;
+      gap: 20px;
+
+      &Item {
+        width: calc((100% - 20px * 2) / 3);
+      }
+    }
+  }
+}

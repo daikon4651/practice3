@@ -1,0 +1,8 @@
+// 関数
+
+
+// 合計
+@function sum($num1: 3, $num2: 19) {
+  @return $num1 + $num2 + px;
+    // px に '' を付けてはいけない。
+}

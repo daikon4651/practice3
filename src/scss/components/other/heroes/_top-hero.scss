@@ -1,0 +1,180 @@
+// ヒーローイメージ・ヘッダー画像・ラージヘッダー・キービジュアル・メインビジュアル
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.topHero {
+  position: relative;
+  padding: 25px 25px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url(../images/candy.jpg);
+    background-position: center;
+    background-size: cover;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+    transition: var(--transition);
+
+    .is-darkMode & {
+      filter: saturate(80%) brightness(80%);
+    }
+  }
+
+  &__head {
+    position: relative;
+    padding-block-start: 72px;
+    border: solid 1px;
+    border-image-source: url(../images/border.svg);
+    border-image-slice: 68;
+    border-image-width: 40px;
+    border-image-outset: 20px;
+    text-align: center;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: var(--whiteLineHeight);
+      margin-inline: auto;
+      background-color: #fff;
+      // transition: var(--transition);
+    }
+  }
+
+  &__heading {
+    margin-block-end: 153px;
+  }
+
+  &__catch {
+    font-weight: bold;
+    color: var(--whiteTextColor);
+  }
+
+  &__mode {
+    position: absolute;
+    top: 385px;
+    left: calc(50% - 46px);
+
+    &Text {
+      width: 137px;
+      line-height: 51px;
+      border: solid 1px var(--lightMainColor);
+      font-family: Georgia, serif;
+      font-size: 21px;
+      background-color: var(--translucentBgColor);
+      color: var(--modeTextColor);
+      transform: rotate(-18deg);
+      transition: var(--transition);
+
+      &::before {
+        content: "Light ";
+
+        .is-darkMode & {
+          content: "Dark ";
+        }
+      }
+    }
+
+    &Switch {
+      position: relative;
+      top: -8px;
+      left: 68px;
+    }
+  }
+
+  &__body {
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: var(--whiteLineHeight);
+      margin-inline: auto;
+      background-color: #fff;
+    }
+
+    &Inner {
+      max-width: 378px;
+      padding: 42px 25px;
+      margin-inline: auto;
+      border-radius: 30px;
+      background-color: var(--translucentBgColor);
+      transition: var(--transition);
+
+      &::before {
+        content: url(../images/candy.svg);
+        display: block;
+        margin-block-end: 18px;
+        text-align: center;
+      }
+    }
+
+    &Catch {
+      margin-block-end: 30px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.5;
+      color: var(--mainColor);
+    }
+
+    &Text {
+      font-size: 12px;
+      line-height: 2;
+      text-align: justify;
+      text-justify: inter-ideograph;
+    }
+  }
+
+
+  @include g.mq() {
+    padding: 44px 44px 0;
+
+    &__head {
+      padding-block-start: 120px;
+      border-image-width: auto;
+      border-image-outset: 34px;
+    }
+
+    &__heading {
+      margin-block-end: 120px;
+    }
+
+    &__catch {
+      font-size: 22px;
+    }
+
+    &__mode {
+      top: 366px;
+      left: calc(50% + 81px);
+    }
+
+    &__body {
+
+      &Inner {
+        max-width: 567px;
+        padding: 42px 110px;
+        border-radius: 190px;
+      }
+
+      &Catch {
+        margin-block-end: 46px;
+        font-size: 25px;
+      }
+
+      &Text {
+        font-size: 18px;
+      }
+    }
+  }
+}

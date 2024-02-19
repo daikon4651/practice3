@@ -1,0 +1,56 @@
+// CSSカスタムプロパティ・CSS変数・カスケード変数
+
+
+
+// 変数、ミックスイン、関数
+@use "../global/" as g;
+
+
+
+:root {
+  // カラー
+  --mainColor: #F26A74;
+  --lightMainColor: #FFA5A5;
+
+  // ダークモードで変更。
+  --bgColor: #ffffff;
+  --checkBgColor: #FFF7D2;
+  --translucentBgColor: rgba(255, 255, 255, 0.6);
+  --textColor: #444444;
+  --whiteTextColor: #ffffff;
+  --modeTextColor: var(--mainColor);
+  --snsColor: var(--mainColor);
+
+  &.is-darkMode {
+    --bgColor: #231802;
+    --checkBgColor: #372A0A;
+    --translucentBgColor: rgba(35, 24, 2, 0.7);
+    --textColor: #EBEBEB;
+    --whiteTextColor: #EBEBEB;
+    --modeTextColor: var(--lightMainColor);
+    --snsColor: var(--lightMainColor);
+  }
+
+
+
+
+  // ラインの高さ
+
+  // 白
+  --whiteLineHeight: 100px;
+  @include g.mq() {
+    --whiteLineHeight: 154px;
+  }
+
+  // ピンク
+  --pinkLineHeight: 100px;
+  @include g.mq() {
+    --pinkLineHeight: 120px;
+  }
+
+
+
+
+  // トランジジョン
+  --transition: 0.5s ease-in-out;
+}

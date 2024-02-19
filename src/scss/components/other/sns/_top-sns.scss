@@ -1,0 +1,20 @@
+// SNS・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global/" as g;
+
+
+.topSns {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  &__icon {
+    font-size: 40px;
+    color: var(--snsColor);
+  }
+}

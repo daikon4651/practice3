@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('./components/common/_head.ejs', {pageTitle: 'トップページ'}) %>
+
+<body>
+
+<%- include('./components/other/heroes/_top-hero') %>
+
+<section class="topSection">
+
+  <div class="topSection__head">
+    <h2 class="topSection__heading">色とりどりのキャンディ</h2>
+
+    <p class="topSection__text">わたしたちがお届けできるキャンディを紹介します。古今東西のキャンディが揃っています。</p>
+  </div><!-- /.topSection__head -->
+
+  <ul class="topSection__list">
+    <li class="topSection__listItem">
+      <img class="topSection__listImage" src="../images/candy01.jpg" alt="写真：飴 01" width="500" height="500">
+    </li>
+
+    <li class="topSection__listItem">
+      <img class="topSection__listImage" src="../images/candy02.jpg" alt="写真：飴 02" width="500" height="500">
+    </li>
+
+    <li class="topSection__listItem">
+      <img class="topSection__listImage" src="../images/candy03.jpg" alt="写真：飴 03" width="500" height="500">
+    </li>
+
+    <li class="topSection__listItem">
+      <img class="topSection__listImage" src="../images/candy04.jpg" alt="写真：飴 04" width="500" height="500">
+    </li>
+
+    <li class="topSection__listItem">
+      <img class="topSection__listImage" src="../images/candy05.jpg" alt="写真：飴 05" width="500" height="500">
+    </li>
+
+    <li class="topSection__listItem">
+      <img class="topSection__listImage" src="../images/candy06.jpg" alt="写真：飴 06" width="500" height="500">
+    </li>
+  </ul>
+</section>
+
+<%- include('./components/common/_footer') %>
+
+</body>
+</html>

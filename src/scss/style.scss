@@ -1,0 +1,50 @@
+// CSSカスタムプロパティ、CSS変数、カスケード変数
+@use "./settings/variables";
+
+
+
+
+// キーフレームアニメーション
+@use "./tools/_keyframes.scss";
+
+
+
+
+// ベース
+@use "bases/_bases.scss";
+
+
+
+
+// コンポーネント・パーツ
+
+// スイッチ
+@use "./components/parts/switches";
+
+
+
+
+// コンポーネント・共通
+
+// フッター
+@use "./components/common/_footer.scss";
+
+
+
+
+// コンポーネント・その他
+
+// ヒーローイメージ、ヘッダー画像、ラージヘッダー、キービジュアル、メインビジュアル・トップページ
+@use "./components/other/heroes/top-hero";
+
+// セクション・トップページ
+@use "./components/other/sections/top-section";
+
+// SNS・トップページ
+@use "./components/other/sns/_top-sns.scss";
+
+
+
+
+// Utilityクラス、ユーティリティクラス、汎用クラス、ヘルパークラス
+@use "./utilities/_utilities.scss";

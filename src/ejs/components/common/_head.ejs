@@ -1,0 +1,22 @@
+<%
+  if (typeof pageTitle === 'undefined') {
+    var pageTitle = '';
+  }
+%>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    <% if (pageTitle) { %>
+      <%= pageTitle %> | からふる
+    <% } else { %>
+      からふる
+    <% } %>
+  </title>
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.min.css' integrity='sha512-qcQ7uN9Tta289q3/6Bgp+5EwfCG6AwJerkQjCpabmnF4VYRAF8+oEshf3wxo+ObDQyHLcXqrFTcujCEs5lCLPA==' crossorigin='anonymous'/>
+</head>
